@@ -16,13 +16,11 @@ gem 'font-awesome-rails'
 gem 'russian'
 
 group :development, :test do
-  gem 'sqlite3', '~> 1.3.13'
+  gem 'sqlite3'
   gem 'byebug'
   gem 'rspec-rails', '~> 3.4'
-  # Гем, который использует rspec, чтобы смотреть наш сайт
-  gem 'capybara'
-  # Гем, который позволяет смотреть, что видит capybara
-  gem 'launchy'
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
 end
 
 group :production do
