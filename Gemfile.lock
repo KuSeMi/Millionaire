@@ -111,7 +111,7 @@ GEM
     nokogiri (1.10.2)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
-    pg (1.1.4)
+    pg (0.21.0)
     rack (1.6.11)
     rack-pjax (1.1.0)
       nokogiri (~> 1.5)
@@ -229,12 +229,12 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  devise (~> 4.6.1)
+  devise (>= 4.6.1)
   devise-i18n
   factory_bot_rails
   font-awesome-rails
   jquery-rails
-  pg
+  pg (~> 0.20)
   rails (~> 4.2.10)
   rails_12factor
   rails_admin
