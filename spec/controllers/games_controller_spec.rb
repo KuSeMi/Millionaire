@@ -3,7 +3,7 @@ require 'support/my_spec_helper'
 
 RSpec.describe GamesController, type: :controller do
   # обычный пользователь
-  let(:user) { FactoryBot.create(:user) }
+  let(:users) { FactoryBot.create(:user) }
   # админ
   let(:admin) { FactoryBot.create(:user, is_admin: true) }
   # игра с прописанными игровыми вопросами
@@ -26,7 +26,7 @@ RSpec.describe GamesController, type: :controller do
   end
 
   # Юзер залогинен
-  context 'Usual user' do
+  context 'Usual users' do
     # Этот блок будет выполняться перед каждым тестом в группе
     # Логиним юзера с помощью девайзовского метода sign_in
     before(:each) { sign_in user }
