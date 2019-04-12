@@ -25,6 +25,8 @@ RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.include Devise::TestHelpers, type: :controller
   config.include Devise::TestHelpers, type: :view
+  # Подключаем в фичах специальные хелперы для авторизации
+  config.include Warden::Test::Helpers, type: :feature
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
@@ -51,3 +53,6 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end
+
+# Это нужно, чтобы капибара искала стили и js в правильном месте
+Capybara.asset_host = "http://localhost:3000"
